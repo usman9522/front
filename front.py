@@ -32,7 +32,7 @@ if uploaded_file:
                 st.dataframe(result)
 
                 output = BytesIO()
-                with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+                with pd.ExcelWriter(output, engine='openpyxl') as writer:
                     result.to_excel(writer, index=False, sheet_name='ScoredData')
 
                 st.download_button(
