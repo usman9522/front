@@ -19,7 +19,7 @@ if uploaded_file:
         with st.spinner("Sending file ..."):
             uploaded_file.seek(0)
             response = requests.post(
-                "https://b322-182-176-168-81.ngrok-free.app:9000",
+                "https://b322-182-176-168-81.ngrok-free.app/score",
                 files={"file": (uploaded_file.name, uploaded_file, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")}
             )
 
